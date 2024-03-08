@@ -46,21 +46,6 @@ namespace EnmosProje
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView4 = new DevExpress.XtraCharts.DoughnutSeriesView();
             DevExpress.XtraCharts.SeriesTitle seriesTitle4 = new DevExpress.XtraCharts.SeriesTitle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGorevlerim));
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.CmbAssignee2 = new System.Windows.Forms.ComboBox();
-            this.CmbAssignee = new System.Windows.Forms.ComboBox();
-            this.TxtLabel = new System.Windows.Forms.Label();
-            this.MskDeadline = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.RchAciklama = new System.Windows.Forms.RichTextBox();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
-            this.CmbDurum = new System.Windows.Forms.ComboBox();
-            this.TxtIs = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -77,9 +62,21 @@ namespace EnmosProje
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CmbAssignee2 = new System.Windows.Forms.ComboBox();
+            this.CmbAssignee = new System.Windows.Forms.ComboBox();
+            this.TxtLabel = new System.Windows.Forms.Label();
+            this.MskDeadline = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.RchAciklama = new System.Windows.Forms.RichTextBox();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
+            this.CmbDurum = new System.Windows.Forms.ComboBox();
+            this.TxtIs = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -107,172 +104,8 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.Controls.Add(this.pictureBox1);
-            this.groupControl1.Controls.Add(this.CmbAssignee2);
-            this.groupControl1.Controls.Add(this.CmbAssignee);
-            this.groupControl1.Controls.Add(this.TxtLabel);
-            this.groupControl1.Controls.Add(this.MskDeadline);
-            this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.label8);
-            this.groupControl1.Controls.Add(this.RchAciklama);
-            this.groupControl1.Controls.Add(this.BtnGuncelle);
-            this.groupControl1.Controls.Add(this.CmbDurum);
-            this.groupControl1.Controls.Add(this.TxtIs);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(813, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(271, 661);
-            this.groupControl1.TabIndex = 4;
-            // 
-            // CmbAssignee2
-            // 
-            this.CmbAssignee2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbAssignee2.FormattingEnabled = true;
-            this.CmbAssignee2.Location = new System.Drawing.Point(102, 255);
-            this.CmbAssignee2.Name = "CmbAssignee2";
-            this.CmbAssignee2.Size = new System.Drawing.Size(148, 27);
-            this.CmbAssignee2.TabIndex = 20;
-            // 
-            // CmbAssignee
-            // 
-            this.CmbAssignee.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbAssignee.FormattingEnabled = true;
-            this.CmbAssignee.Location = new System.Drawing.Point(103, 222);
-            this.CmbAssignee.Name = "CmbAssignee";
-            this.CmbAssignee.Size = new System.Drawing.Size(148, 27);
-            this.CmbAssignee.TabIndex = 19;
-            // 
-            // TxtLabel
-            // 
-            this.TxtLabel.AutoSize = true;
-            this.TxtLabel.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLabel.Location = new System.Drawing.Point(3, 348);
-            this.TxtLabel.Name = "TxtLabel";
-            this.TxtLabel.Size = new System.Drawing.Size(61, 29);
-            this.TxtLabel.TabIndex = 18;
-            this.TxtLabel.Text = "Null";
-            // 
-            // MskDeadline
-            // 
-            this.MskDeadline.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MskDeadline.Location = new System.Drawing.Point(102, 189);
-            this.MskDeadline.Mask = "00/00/0000";
-            this.MskDeadline.Name = "MskDeadline";
-            this.MskDeadline.Size = new System.Drawing.Size(151, 27);
-            this.MskDeadline.TabIndex = 17;
-            this.MskDeadline.ValidatingType = typeof(System.DateTime);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 225);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 19);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Assignee";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 258);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 19);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Assignee 2";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 192);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 19);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Deadline";
-            // 
-            // RchAciklama
-            // 
-            this.RchAciklama.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RchAciklama.Location = new System.Drawing.Point(102, 62);
-            this.RchAciklama.Name = "RchAciklama";
-            this.RchAciklama.Size = new System.Drawing.Size(151, 89);
-            this.RchAciklama.TabIndex = 9;
-            this.RchAciklama.Text = "";
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuncelle.Location = new System.Drawing.Point(19, 301);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(232, 36);
-            this.BtnGuncelle.TabIndex = 7;
-            this.BtnGuncelle.Text = "Update Job Status";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
-            this.BtnGuncelle.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // CmbDurum
-            // 
-            this.CmbDurum.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbDurum.FormattingEnabled = true;
-            this.CmbDurum.Items.AddRange(new object[] {
-            "Waiting",
-            "To Be Tested",
-            "Finished"});
-            this.CmbDurum.Location = new System.Drawing.Point(102, 157);
-            this.CmbDurum.Name = "CmbDurum";
-            this.CmbDurum.Size = new System.Drawing.Size(151, 26);
-            this.CmbDurum.TabIndex = 6;
-            // 
-            // TxtIs
-            // 
-            this.TxtIs.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIs.Location = new System.Drawing.Point(102, 29);
-            this.TxtIs.Name = "TxtIs";
-            this.TxtIs.Size = new System.Drawing.Size(151, 27);
-            this.TxtIs.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Description";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Job Status";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Task";
             // 
             // label7
             // 
@@ -303,7 +136,7 @@ namespace EnmosProje
             this.splitContainer1.Panel2.Controls.Add(this.chartControl3);
             this.splitContainer1.Panel2.Controls.Add(this.chartControl2);
             this.splitContainer1.Panel2.Controls.Add(this.chartControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(744, 661);
+            this.splitContainer1.Size = new System.Drawing.Size(817, 661);
             this.splitContainer1.SplitterDistance = 485;
             this.splitContainer1.TabIndex = 15;
             // 
@@ -318,7 +151,7 @@ namespace EnmosProje
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(744, 485);
+            this.groupBox1.Size = new System.Drawing.Size(817, 485);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
@@ -326,10 +159,10 @@ namespace EnmosProje
             // 
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gridControl1.Location = new System.Drawing.Point(6, 59);
+            this.gridControl1.Location = new System.Drawing.Point(-3, 57);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(242, 420);
+            this.gridControl1.Size = new System.Drawing.Size(269, 420);
             this.gridControl1.TabIndex = 17;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -361,7 +194,7 @@ namespace EnmosProje
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(266, 16);
+            this.label5.Location = new System.Drawing.Point(308, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 34);
             this.label5.TabIndex = 14;
@@ -373,7 +206,7 @@ namespace EnmosProje
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(557, 16);
+            this.label6.Location = new System.Drawing.Point(616, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 34);
             this.label6.TabIndex = 13;
@@ -383,10 +216,10 @@ namespace EnmosProje
             // 
             this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gridControl3.Location = new System.Drawing.Point(499, 53);
+            this.gridControl3.Location = new System.Drawing.Point(545, 57);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(239, 426);
+            this.gridControl3.Size = new System.Drawing.Size(266, 426);
             this.gridControl3.TabIndex = 12;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -404,10 +237,10 @@ namespace EnmosProje
             // 
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gridControl2.Location = new System.Drawing.Point(251, 59);
+            this.gridControl2.Location = new System.Drawing.Point(270, 57);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(242, 420);
+            this.gridControl2.Size = new System.Drawing.Size(269, 420);
             this.gridControl2.TabIndex = 11;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -426,7 +259,7 @@ namespace EnmosProje
             this.chartControl4.BackColor = System.Drawing.Color.Transparent;
             this.chartControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.chartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl4.Location = new System.Drawing.Point(563, 0);
+            this.chartControl4.Location = new System.Drawing.Point(620, 0);
             this.chartControl4.Name = "chartControl4";
             doughnutSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             doughnutSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.Radial;
@@ -446,7 +279,7 @@ namespace EnmosProje
             series1.View = doughnutSeriesView1;
             this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl4.Size = new System.Drawing.Size(174, 172);
+            this.chartControl4.Size = new System.Drawing.Size(193, 172);
             this.chartControl4.TabIndex = 18;
             // 
             // chartControl3
@@ -454,7 +287,7 @@ namespace EnmosProje
             this.chartControl3.BackColor = System.Drawing.Color.Transparent;
             this.chartControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl3.Location = new System.Drawing.Point(377, 0);
+            this.chartControl3.Location = new System.Drawing.Point(415, 0);
             this.chartControl3.Name = "chartControl3";
             doughnutSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             doughnutSeriesLabel2.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.Radial;
@@ -473,7 +306,7 @@ namespace EnmosProje
             series2.View = doughnutSeriesView2;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            this.chartControl3.Size = new System.Drawing.Size(186, 172);
+            this.chartControl3.Size = new System.Drawing.Size(205, 172);
             this.chartControl3.TabIndex = 17;
             // 
             // chartControl2
@@ -481,7 +314,7 @@ namespace EnmosProje
             this.chartControl2.BackColor = System.Drawing.Color.Transparent;
             this.chartControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl2.Location = new System.Drawing.Point(191, 0);
+            this.chartControl2.Location = new System.Drawing.Point(210, 0);
             this.chartControl2.Name = "chartControl2";
             doughnutSeriesLabel3.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             doughnutSeriesLabel3.TextPattern = "{A}";
@@ -500,7 +333,7 @@ namespace EnmosProje
             series3.View = doughnutSeriesView3;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3};
-            this.chartControl2.Size = new System.Drawing.Size(186, 172);
+            this.chartControl2.Size = new System.Drawing.Size(205, 172);
             this.chartControl2.TabIndex = 16;
             // 
             // chartControl1
@@ -530,19 +363,178 @@ namespace EnmosProje
             series4.View = doughnutSeriesView4;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series4};
-            this.chartControl1.Size = new System.Drawing.Size(191, 172);
+            this.chartControl1.Size = new System.Drawing.Size(210, 172);
             this.chartControl1.TabIndex = 15;
             // 
-            // pictureBox1
+            // groupBox2
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 380);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 279);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.CmbAssignee2);
+            this.groupBox2.Controls.Add(this.CmbAssignee);
+            this.groupBox2.Controls.Add(this.TxtLabel);
+            this.groupBox2.Controls.Add(this.MskDeadline);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.RchAciklama);
+            this.groupBox2.Controls.Add(this.BtnGuncelle);
+            this.groupBox2.Controls.Add(this.CmbDurum);
+            this.groupBox2.Controls.Add(this.TxtIs);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(817, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(267, 661);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // CmbAssignee2
+            // 
+            this.CmbAssignee2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbAssignee2.FormattingEnabled = true;
+            this.CmbAssignee2.Location = new System.Drawing.Point(105, 252);
+            this.CmbAssignee2.Name = "CmbAssignee2";
+            this.CmbAssignee2.Size = new System.Drawing.Size(148, 27);
+            this.CmbAssignee2.TabIndex = 35;
+            // 
+            // CmbAssignee
+            // 
+            this.CmbAssignee.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbAssignee.FormattingEnabled = true;
+            this.CmbAssignee.Location = new System.Drawing.Point(106, 219);
+            this.CmbAssignee.Name = "CmbAssignee";
+            this.CmbAssignee.Size = new System.Drawing.Size(148, 27);
+            this.CmbAssignee.TabIndex = 34;
+            // 
+            // TxtLabel
+            // 
+            this.TxtLabel.AutoSize = true;
+            this.TxtLabel.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TxtLabel.Location = new System.Drawing.Point(6, 345);
+            this.TxtLabel.Name = "TxtLabel";
+            this.TxtLabel.Size = new System.Drawing.Size(61, 29);
+            this.TxtLabel.TabIndex = 33;
+            this.TxtLabel.Text = "Null";
+            // 
+            // MskDeadline
+            // 
+            this.MskDeadline.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MskDeadline.Location = new System.Drawing.Point(105, 186);
+            this.MskDeadline.Mask = "00/00/0000";
+            this.MskDeadline.Name = "MskDeadline";
+            this.MskDeadline.Size = new System.Drawing.Size(151, 27);
+            this.MskDeadline.TabIndex = 32;
+            this.MskDeadline.ValidatingType = typeof(System.DateTime);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(18, 222);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 19);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Assignee";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(7, 255);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 19);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Assignee 2";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(18, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 19);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Deadline";
+            // 
+            // RchAciklama
+            // 
+            this.RchAciklama.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RchAciklama.Location = new System.Drawing.Point(105, 59);
+            this.RchAciklama.Name = "RchAciklama";
+            this.RchAciklama.Size = new System.Drawing.Size(151, 89);
+            this.RchAciklama.TabIndex = 28;
+            this.RchAciklama.Text = "";
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuncelle.Location = new System.Drawing.Point(22, 298);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(232, 36);
+            this.BtnGuncelle.TabIndex = 27;
+            this.BtnGuncelle.Text = "Update Job Status";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // CmbDurum
+            // 
+            this.CmbDurum.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDurum.FormattingEnabled = true;
+            this.CmbDurum.Items.AddRange(new object[] {
+            "Waiting",
+            "To Be Tested",
+            "Finished"});
+            this.CmbDurum.Location = new System.Drawing.Point(105, 154);
+            this.CmbDurum.Name = "CmbDurum";
+            this.CmbDurum.Size = new System.Drawing.Size(151, 26);
+            this.CmbDurum.TabIndex = 26;
+            // 
+            // TxtIs
+            // 
+            this.TxtIs.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIs.Location = new System.Drawing.Point(105, 26);
+            this.TxtIs.Name = "TxtIs";
+            this.TxtIs.Size = new System.Drawing.Size(151, 27);
+            this.TxtIs.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(11, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 18);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Description";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(11, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Job Status";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(51, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 19);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Task";
             // 
             // FrmGorevlerim
             // 
@@ -551,15 +543,12 @@ namespace EnmosProje
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.groupControl1);
             this.Name = "FrmGorevlerim";
             this.Text = "FrmGorevlerim";
             this.Load += new System.EventHandler(this.FrmGorevlerim_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -588,30 +577,16 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnGuncelle;
-        private System.Windows.Forms.ComboBox CmbDurum;
-        private System.Windows.Forms.TextBox TxtIs;
-        private System.Windows.Forms.RichTextBox RchAciklama;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.MaskedTextBox MskDeadline;
-        private System.Windows.Forms.Label TxtLabel;
-        private System.Windows.Forms.ComboBox CmbAssignee2;
-        private System.Windows.Forms.ComboBox CmbAssignee;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraCharts.ChartControl chartControl4;
         private DevExpress.XtraCharts.ChartControl chartControl3;
@@ -627,6 +602,20 @@ namespace EnmosProje
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox CmbAssignee2;
+        private System.Windows.Forms.ComboBox CmbAssignee;
+        private System.Windows.Forms.Label TxtLabel;
+        private System.Windows.Forms.MaskedTextBox MskDeadline;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox RchAciklama;
+        private System.Windows.Forms.Button BtnGuncelle;
+        private System.Windows.Forms.ComboBox CmbDurum;
+        private System.Windows.Forms.TextBox TxtIs;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

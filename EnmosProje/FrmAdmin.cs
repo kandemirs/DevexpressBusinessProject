@@ -67,7 +67,7 @@ namespace EnmosProje
                 komut2.ExecuteNonQuery();
 
 
-                FrmAnamodul fr = new FrmAnamodul();
+                FrmHasModul fr = new FrmHasModul();
                 fr.Show();
                 this.Hide();
             }

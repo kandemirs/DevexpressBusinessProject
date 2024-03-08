@@ -43,19 +43,17 @@ namespace EnmosProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBusinessAnalysis));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl4 = new DevExpress.XtraCharts.ChartControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,6 +65,7 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -79,17 +78,18 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.xtraTabControl1.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 71);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1284, 511);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1284, 440);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -99,20 +99,9 @@ namespace EnmosProje
             // 
             this.xtraTabPage1.Controls.Add(this.splitContainer1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1282, 486);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1282, 415);
             this.xtraTabPage1.Text = "Assignments";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Controls.Add(this.splitContainer2);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1282, 486);
-            this.xtraTabPage2.Text = "Emlployee";
-            // 
-            // gridView1
-            // 
-            this.gridView1.Name = "gridView1";
             // 
             // splitContainer1
             // 
@@ -127,7 +116,7 @@ namespace EnmosProje
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chartControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1282, 486);
+            this.splitContainer1.Size = new System.Drawing.Size(1282, 415);
             this.splitContainer1.SplitterDistance = 599;
             this.splitContainer1.TabIndex = 5;
             // 
@@ -144,7 +133,7 @@ namespace EnmosProje
             series1.View = sideBySideBarSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl2.Size = new System.Drawing.Size(599, 486);
+            this.chartControl2.Size = new System.Drawing.Size(599, 415);
             this.chartControl2.TabIndex = 4;
             // 
             // chartControl1
@@ -157,8 +146,15 @@ namespace EnmosProje
             series2.View = doughnutSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(679, 486);
+            this.chartControl1.Size = new System.Drawing.Size(679, 415);
             this.chartControl1.TabIndex = 5;
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.splitContainer2);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1282, 486);
+            this.xtraTabPage2.Text = "Emlployee";
             // 
             // splitContainer2
             // 
@@ -211,6 +207,10 @@ namespace EnmosProje
             this.chartControl4.Size = new System.Drawing.Size(668, 486);
             this.chartControl4.TabIndex = 4;
             // 
+            // gridView1
+            // 
+            this.gridView1.Name = "gridView1";
+            // 
             // FrmBusinessAnalysis
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -225,8 +225,6 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -238,6 +236,7 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -250,6 +249,7 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
