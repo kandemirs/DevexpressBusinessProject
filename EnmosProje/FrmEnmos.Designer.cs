@@ -31,8 +31,10 @@ namespace EnmosProje
         {
             DevExpress.XtraEditors.GroupControl groupControl1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEnmos));
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.CmbPosition = new System.Windows.Forms.ComboBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.CmbDepartment = new System.Windows.Forms.ComboBox();
             this.MskTel = new System.Windows.Forms.MaskedTextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.RchAdres = new System.Windows.Forms.RichTextBox();
@@ -69,8 +71,10 @@ namespace EnmosProje
             // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(this.simpleButton1);
             groupControl1.Controls.Add(this.CmbPosition);
+            groupControl1.Controls.Add(this.simpleButton1);
+            groupControl1.Controls.Add(this.labelControl10);
+            groupControl1.Controls.Add(this.CmbDepartment);
             groupControl1.Controls.Add(this.MskTel);
             groupControl1.Controls.Add(this.labelControl5);
             groupControl1.Controls.Add(this.RchAdres);
@@ -94,33 +98,54 @@ namespace EnmosProje
             groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             groupControl1.Location = new System.Drawing.Point(0, 0);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new System.Drawing.Size(271, 509);
+            groupControl1.Size = new System.Drawing.Size(278, 561);
             groupControl1.TabIndex = 4;
+            // 
+            // CmbPosition
+            // 
+            this.CmbPosition.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbPosition.FormattingEnabled = true;
+            this.CmbPosition.Location = new System.Drawing.Point(89, 192);
+            this.CmbPosition.Name = "CmbPosition";
+            this.CmbPosition.Size = new System.Drawing.Size(177, 24);
+            this.CmbPosition.TabIndex = 28;
             // 
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(34, 452);
+            this.simpleButton1.Location = new System.Drawing.Point(55, 486);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(211, 31);
             this.simpleButton1.TabIndex = 26;
-            this.simpleButton1.Text = "Temizle";
+            this.simpleButton1.Text = "Clean";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
-            // CmbPosition
+            // labelControl10
             // 
-            this.CmbPosition.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbPosition.FormattingEnabled = true;
-            this.CmbPosition.Location = new System.Drawing.Point(68, 155);
-            this.CmbPosition.Name = "CmbPosition";
-            this.CmbPosition.Size = new System.Drawing.Size(177, 24);
-            this.CmbPosition.TabIndex = 25;
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(27, 195);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(56, 16);
+            this.labelControl10.TabIndex = 27;
+            this.labelControl10.Text = "Position:";
+            // 
+            // CmbDepartment
+            // 
+            this.CmbDepartment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbDepartment.FormattingEnabled = true;
+            this.CmbDepartment.Location = new System.Drawing.Point(89, 155);
+            this.CmbDepartment.Name = "CmbDepartment";
+            this.CmbDepartment.Size = new System.Drawing.Size(177, 24);
+            this.CmbDepartment.TabIndex = 25;
+            this.CmbDepartment.SelectedIndexChanged += new System.EventHandler(this.CmbDepartment_SelectedIndexChanged);
             // 
             // MskTel
             // 
             this.MskTel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MskTel.Location = new System.Drawing.Point(68, 262);
+            this.MskTel.Location = new System.Drawing.Point(89, 296);
             this.MskTel.Mask = "(999) 000-0000";
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(177, 23);
@@ -130,7 +155,7 @@ namespace EnmosProje
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(22, 301);
+            this.labelControl5.Location = new System.Drawing.Point(43, 335);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(44, 16);
             this.labelControl5.TabIndex = 23;
@@ -139,7 +164,7 @@ namespace EnmosProje
             // RchAdres
             // 
             this.RchAdres.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RchAdres.Location = new System.Drawing.Point(68, 291);
+            this.RchAdres.Location = new System.Drawing.Point(89, 325);
             this.RchAdres.Name = "RchAdres";
             this.RchAdres.Size = new System.Drawing.Size(177, 30);
             this.RchAdres.TabIndex = 22;
@@ -148,7 +173,7 @@ namespace EnmosProje
             // TxtMail
             // 
             this.TxtMail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMail.Location = new System.Drawing.Point(68, 121);
+            this.TxtMail.Location = new System.Drawing.Point(89, 121);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(177, 23);
             this.TxtMail.TabIndex = 20;
@@ -158,38 +183,40 @@ namespace EnmosProje
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuncelle.Appearance.Options.UseFont = true;
             this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(34, 415);
+            this.BtnGuncelle.Location = new System.Drawing.Point(55, 449);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(211, 31);
             this.BtnGuncelle.TabIndex = 12;
-            this.BtnGuncelle.Text = "Guncelle";
+            this.BtnGuncelle.Text = "Update";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click_1);
             // 
             // BtnSil
             // 
             this.BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSil.Appearance.Options.UseFont = true;
             this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
-            this.BtnSil.Location = new System.Drawing.Point(34, 378);
+            this.BtnSil.Location = new System.Drawing.Point(55, 412);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(211, 31);
             this.BtnSil.TabIndex = 13;
-            this.BtnSil.Text = "Sil";
+            this.BtnSil.Text = "Delete";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click_1);
             // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(10, 158);
+            this.labelControl9.Location = new System.Drawing.Point(4, 158);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(56, 16);
+            this.labelControl9.Size = new System.Drawing.Size(83, 16);
             this.labelControl9.TabIndex = 18;
-            this.labelControl9.Text = "Position:";
+            this.labelControl9.Text = "Department:";
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(36, 125);
+            this.labelControl8.Location = new System.Drawing.Point(57, 125);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(30, 16);
             this.labelControl8.TabIndex = 17;
@@ -199,7 +226,7 @@ namespace EnmosProje
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(43, 265);
+            this.labelControl7.Location = new System.Drawing.Point(64, 299);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(23, 16);
             this.labelControl7.TabIndex = 16;
@@ -209,7 +236,7 @@ namespace EnmosProje
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(47, 25);
+            this.labelControl6.Location = new System.Drawing.Point(68, 25);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(19, 16);
             this.labelControl6.TabIndex = 15;
@@ -218,7 +245,7 @@ namespace EnmosProje
             // TxtId
             // 
             this.TxtId.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(68, 21);
+            this.TxtId.Location = new System.Drawing.Point(89, 21);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(177, 23);
             this.TxtId.TabIndex = 14;
@@ -228,16 +255,17 @@ namespace EnmosProje
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnKaydet.Appearance.Options.UseFont = true;
             this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
-            this.BtnKaydet.Location = new System.Drawing.Point(34, 341);
+            this.BtnKaydet.Location = new System.Drawing.Point(55, 375);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(211, 31);
             this.BtnKaydet.TabIndex = 11;
-            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Text = "Save";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click_1);
             // 
             // MskYil
             // 
             this.MskYil.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MskYil.Location = new System.Drawing.Point(68, 226);
+            this.MskYil.Location = new System.Drawing.Point(89, 260);
             this.MskYil.Mask = "0000";
             this.MskYil.Name = "MskYil";
             this.MskYil.Size = new System.Drawing.Size(177, 23);
@@ -248,7 +276,7 @@ namespace EnmosProje
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(27, 197);
+            this.labelControl4.Location = new System.Drawing.Point(48, 231);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(39, 16);
             this.labelControl4.TabIndex = 7;
@@ -258,7 +286,7 @@ namespace EnmosProje
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(46, 230);
+            this.labelControl3.Location = new System.Drawing.Point(67, 264);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(20, 16);
             this.labelControl3.TabIndex = 6;
@@ -268,7 +296,7 @@ namespace EnmosProje
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(21, 91);
+            this.labelControl2.Location = new System.Drawing.Point(42, 91);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(45, 16);
             this.labelControl2.TabIndex = 5;
@@ -278,7 +306,7 @@ namespace EnmosProje
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(43, 58);
+            this.labelControl1.Location = new System.Drawing.Point(64, 58);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(23, 16);
             this.labelControl1.TabIndex = 4;
@@ -287,7 +315,7 @@ namespace EnmosProje
             // TxtSoyad
             // 
             this.TxtSoyad.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSoyad.Location = new System.Drawing.Point(68, 87);
+            this.TxtSoyad.Location = new System.Drawing.Point(89, 87);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(177, 23);
             this.TxtSoyad.TabIndex = 3;
@@ -295,7 +323,7 @@ namespace EnmosProje
             // TxtMaas
             // 
             this.TxtMaas.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMaas.Location = new System.Drawing.Point(68, 193);
+            this.TxtMaas.Location = new System.Drawing.Point(89, 227);
             this.TxtMaas.Name = "TxtMaas";
             this.TxtMaas.Size = new System.Drawing.Size(177, 23);
             this.TxtMaas.TabIndex = 1;
@@ -303,15 +331,15 @@ namespace EnmosProje
             // TxtAd
             // 
             this.TxtAd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAd.Location = new System.Drawing.Point(68, 54);
+            this.TxtAd.Location = new System.Drawing.Point(89, 54);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(177, 23);
             this.TxtAd.TabIndex = 0;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 2);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -321,8 +349,8 @@ namespace EnmosProje
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(groupControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1050, 509);
-            this.splitContainer1.SplitterDistance = 775;
+            this.splitContainer1.Size = new System.Drawing.Size(984, 561);
+            this.splitContainer1.SplitterDistance = 702;
             this.splitContainer1.TabIndex = 4;
             // 
             // gridControl1
@@ -331,7 +359,7 @@ namespace EnmosProje
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(775, 509);
+            this.gridControl1.Size = new System.Drawing.Size(702, 561);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -343,17 +371,18 @@ namespace EnmosProje
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged_1);
             // 
             // FrmEnmos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1050, 511);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmEnmos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEnmos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmEnmos_Load);
             ((System.ComponentModel.ISupportInitialize)(groupControl1)).EndInit();
             groupControl1.ResumeLayout(false);
@@ -374,7 +403,7 @@ namespace EnmosProje
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.ComboBox CmbPosition;
+        private System.Windows.Forms.ComboBox CmbDepartment;
         private System.Windows.Forms.MaskedTextBox MskTel;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.RichTextBox RchAdres;
@@ -395,5 +424,7 @@ namespace EnmosProje
         private System.Windows.Forms.TextBox TxtSoyad;
         private System.Windows.Forms.TextBox TxtMaas;
         private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.ComboBox CmbPosition;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }

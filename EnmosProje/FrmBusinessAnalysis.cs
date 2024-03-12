@@ -83,9 +83,5 @@ namespace EnmosProje
 
         }
 
-        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

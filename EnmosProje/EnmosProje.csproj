@@ -92,6 +92,12 @@
     <Compile Include="FrmBusinessAnalysis.Designer.cs">
       <DependentUpon>FrmBusinessAnalysis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEnmos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +121,6 @@
     </Compile>
     <Compile Include="FrmHasModul.Designer.cs">
       <DependentUpon>FrmHasModul.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmHomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmHomePage.Designer.cs">
-      <DependentUpon>FrmHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMail.cs">
       <SubType>Form</SubType>
@@ -167,6 +167,9 @@
     <EmbeddedResource Include="FrmBusinessAnalysis.resx">
       <DependentUpon>FrmBusinessAnalysis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEnmos.resx">
       <DependentUpon>FrmEnmos.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHasModul.resx">
       <DependentUpon>FrmHasModul.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHomePage.resx">
-      <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMail.resx">
       <DependentUpon>FrmMail.cs</DependentUpon>

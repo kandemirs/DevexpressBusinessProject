@@ -109,6 +109,7 @@ namespace EnmosProje
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmAddIdentity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddIdentity";
             this.Load += new System.EventHandler(this.FrmAddIdentity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

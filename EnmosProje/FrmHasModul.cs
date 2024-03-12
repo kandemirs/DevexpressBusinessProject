@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
 
 namespace EnmosProje
 {
@@ -125,6 +127,8 @@ namespace EnmosProje
                 BtnRequests.Visible = false;
                 BtnAddEmployee.Visible = false;
                 BtnAddIdentity.Visible = false;
+                BtnExit.Visible = true;
+                BtnChangePassword.Visible = true;
 
 
             }
@@ -133,7 +137,10 @@ namespace EnmosProje
                 //BtnRequests.enabled = true;
                 BtnRequests.Visible = true;
                 BtnAddEmployee.Visible = true;
-                BtnAddIdentity.Visible = false;
+                BtnAddIdentity.Visible = true;
+                BtnExit.Visible = false;
+                BtnChangePassword.Visible = false;
+
             }
         }
 
@@ -151,13 +158,41 @@ namespace EnmosProje
 
             if (Lastlogin != "admin")
             {
-                SqlCommand da = new SqlCommand("Select UserAd From Calisanlar WHERE (UserMail = @Maile)", bgl.baglanti());
+                SqlCommand da = new SqlCommand("Select UserAd,Picture From Calisanlar WHERE (UserMail = @Maile)", bgl.baglanti());
                 da.Parameters.AddWithValue("@Maile", Lastlogin);
 
-                string Name = (string)da.ExecuteScalar();
-                LblHello.Text = "Hello " + Name + " (::";
+                SqlDataReader reader = da.ExecuteReader();
+                if (reader.Read())
+                {
 
+                    string name = reader.GetString(0); // veya reader["UserAd"].ToString();
+                    LblHello.Text = "Hello " + name + " (::";
+
+                    if (!reader.IsDBNull(1)) // Veri null değilse
+                    {
+                        byte[] MyImg = (byte[])reader["Picture"];
+                        MemoryStream ms = new MemoryStream(MyImg);
+                        ms.Position = 0;
+                        Image img = Image.FromStream(ms);
+                        pictureBox2.Image = img;
+                    }
+                    else
+                    {
+                        // Picture alanı null olduğunda buraya gelebilirsiniz
+                        // Örneğin bir varsayılan resim kullanabilirsiniz.
+                        pictureBox2.Image = null;
+                    }
+
+                }
+                else
+                {
+                    LblHello.Text = "Hello User";
+                }
+
+                reader.Close();
                 bgl.baglanti().Close();
+
+
             }
 
         }
@@ -233,5 +268,92 @@ namespace EnmosProje
                 frProfile.Show();
             }
         }
+        FrmAdmin frr;
+        private void BtnProfile_Click(object sender, EventArgs e)
+        {
+            if (frProfile != null && !frProfile.IsDisposed)
+            {
+                frProfile.Close();
+            }
+
+            if (frIdentity != null && !frIdentity.IsDisposed)
+            {
+                frIdentity.Close();
+            }
+            if (frEx != null && !frEx.IsDisposed)
+            {
+                frEx.Close();
+            }
+            if (fr6 != null && !fr6.IsDisposed)
+            {
+                fr6.Close();
+            }
+
+            if (fr11 != null && !fr11.IsDisposed)
+            {
+                fr11.Close();
+
+            }
+            if (fr8 != null && !fr8.IsDisposed)
+            {
+                fr8.Close();
+            }
+            if (fr5 != null && !fr5.IsDisposed)
+            {
+                fr5.Close();
+            }
+            if (fr2 != null && !fr2.IsDisposed)
+            {
+                fr2.Close();
+            }
+            if (fr10 != null && !fr10.IsDisposed)
+            {
+                fr10.Close();
+            }
+            if (fr7 != null && !fr7.IsDisposed)
+            {
+                fr7.Close();
+            }
+            if (frPassword != null && !frPassword.IsDisposed)
+            {
+                frPassword.Close();
+            }
+
+
+            if (frr == null || frr.IsDisposed)
+            {
+                frr = new FrmAdmin();
+                frr.Show();
+            }
+            this.Hide();
+
+        }
+
+
+        private void BtnCalculator_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+        FrmChangePassword frPassword;
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (frPassword == null || frPassword.IsDisposed)
+            {
+                frPassword = new FrmChangePassword();
+                frPassword.Show();
+            }
+        }
+
+        FrmMail frmai;
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (frmai == null || frmai.IsDisposed)
+            {
+                frmai = new FrmMail();
+                frmai.Show();
+            }
+        }
+
+        
     }
 }

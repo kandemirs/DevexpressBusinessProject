@@ -32,6 +32,12 @@ namespace EnmosProje
             SqlDataAdapter da2 = new SqlDataAdapter("Select UserId,Ad,YetkiliStatu,YetkiliAd,Mail,YetkiliTc,Il, Ilce,Telefon,Sektor,Fax From Firmalar", bgl.baglanti());
             da2.Fill(dt2);
             gridControl2.DataSource = dt2;
+
+
+            DataTable dt3 = new DataTable();
+            SqlDataAdapter da3 = new SqlDataAdapter("Select UserId,UserAd,UserSoyad,UserMail,UserTelefon From Calisanlar", bgl.baglanti());
+            da3.Fill(dt3);
+            gridControl3.DataSource = dt3;
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -57,6 +63,21 @@ namespace EnmosProje
             if (dr != null)
             {
                 frm.mail = dr["Mail"].ToString();
+
+
+            }
+            frm.Show();
+
+        }
+
+        private void gridView3_DoubleClick(object sender, EventArgs e)
+        {
+            FrmMail frm = new FrmMail();
+            DataRow dr = gridView3.GetDataRow(gridView3.FocusedRowHandle);
+
+            if (dr != null)
+            {
+                frm.mail = dr["UserMail"].ToString();
 
 
             }

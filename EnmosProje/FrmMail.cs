@@ -28,20 +28,21 @@ namespace EnmosProje
 
         private void BtnGonder_Click(object sender, EventArgs e)
         {
-            MailMessage mesajim = new MailMessage();
-            SmtpClient istemci = new SmtpClient();
-            istemci.Credentials = new System.Net.NetworkCredential("senakandemiiir@gmail.com", "serseri");
-            istemci.Port = 587;
-            istemci.Host = "smtp.live.com";
-            istemci.EnableSsl = true;
-            mesajim.To.Add(RchMesaj.Text);
-            mesajim.From = new MailAddress("senakandemiiir@gmail.com");
-            mesajim.Subject = TxtKonu.Text;
-            mesajim.Body = RchMesaj.Text;
-            istemci.Send(mesajim);
-
-
-
+            string userName = "ennane77@outlook.com";
+            string password = "Enmosbilgisayar123";
+            MailMessage msg = new MailMessage();
+            msg.To.Add(new MailAddress(TxtMail.Text));
+            msg.From = new MailAddress(userName);
+            msg.Subject = TxtKonu.Text;
+            msg.Body = RchMesaj.Text;
+            msg.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient();
+            client.UseDefaultCredentials = false;
+            client.Host = "smtp.office365.com";
+            client.Credentials = new System.Net.NetworkCredential(userName, password);
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.Send(msg);
         }
     }
 }

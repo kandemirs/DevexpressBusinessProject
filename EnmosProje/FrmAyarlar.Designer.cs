@@ -69,8 +69,8 @@ namespace EnmosProje
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.Size = new System.Drawing.Size(514, 661);
+            this.splitContainer1.SplitterDistance = 442;
             this.splitContainer1.TabIndex = 15;
             // 
             // gridControl1
@@ -79,7 +79,7 @@ namespace EnmosProje
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(800, 265);
+            this.gridControl1.Size = new System.Drawing.Size(514, 442);
             this.gridControl1.TabIndex = 15;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -98,7 +98,7 @@ namespace EnmosProje
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(80, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 29);
             this.label1.TabIndex = 27;
@@ -109,7 +109,7 @@ namespace EnmosProje
             this.BtnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUpdate.Appearance.Options.UseFont = true;
             this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(85, 134);
+            this.BtnUpdate.Location = new System.Drawing.Point(118, 133);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(245, 34);
             this.BtnUpdate.TabIndex = 26;
@@ -118,14 +118,14 @@ namespace EnmosProje
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(187, 96);
+            this.TxtPassword.Location = new System.Drawing.Point(220, 98);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(143, 20);
             this.TxtPassword.TabIndex = 25;
             // 
             // TxtUserName
             // 
-            this.TxtUserName.Location = new System.Drawing.Point(187, 59);
+            this.TxtUserName.Location = new System.Drawing.Point(220, 61);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(143, 20);
             this.TxtUserName.TabIndex = 24;
@@ -134,7 +134,7 @@ namespace EnmosProje
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 96);
+            this.label4.Location = new System.Drawing.Point(114, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 23;
@@ -144,7 +144,7 @@ namespace EnmosProje
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 59);
+            this.label3.Location = new System.Drawing.Point(114, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 22;
@@ -157,7 +157,7 @@ namespace EnmosProje
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(514, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -166,9 +166,8 @@ namespace EnmosProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(514, 661);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmAyarlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

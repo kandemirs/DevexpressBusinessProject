@@ -119,6 +119,7 @@ namespace EnmosProje
                 SqlCommand da = new SqlCommand("Select g.GorevDurum,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId WHERE (c2.UserMail = @Maile OR c1.UserMail = @Maile) group by g.GorevDurum ", bgl.baglanti());
                 da.Parameters.AddWithValue("@Maile", LastLoginMail);
                 SqlDataReader dr = da.ExecuteReader();
+                chartControl1.Series["Series 1"].Points.Clear();
                 while (dr.Read())
                 {
 
@@ -134,7 +135,7 @@ namespace EnmosProje
                 SqlCommand dh = new SqlCommand("Select g.Label,COUNT(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId WHERE (c2.UserMail = @Maile OR c1.UserMail = @Maile) group by g.Label ", bgl.baglanti());
                 dh.Parameters.AddWithValue("@Maile", LastLoginMail);
                 SqlDataReader dg = dh.ExecuteReader();
-
+                chartControl2.Series["Series 1"].Points.Clear();
 
                 while (dg.Read())
                 {
@@ -152,6 +153,7 @@ namespace EnmosProje
                 SqlCommand dp = new SqlCommand("Select g.Completed,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId WHERE (c2.UserMail = @Maile OR c1.UserMail = @Maile) group by g.Completed ", bgl.baglanti());
                 dp.Parameters.AddWithValue("@Maile", LastLoginMail);
                 SqlDataReader dt = dp.ExecuteReader();
+                chartControl3.Series["Series 1"].Points.Clear();
                 while (dt.Read())
                 {
 
@@ -167,6 +169,7 @@ namespace EnmosProje
                 SqlCommand dq = new SqlCommand("Select g.Completed,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId WHERE (c2.UserMail = @Maile OR c1.UserMail = @Maile) group by g.Completed ", bgl.baglanti());
                 dq.Parameters.AddWithValue("@Maile", LastLoginMail);
                 SqlDataReader de = dq.ExecuteReader();
+                chartControl4.Series["Series 1"].Points.Clear();
                 while (de.Read())
                 {
 
@@ -180,6 +183,7 @@ namespace EnmosProje
             {
                 SqlCommand da = new SqlCommand("Select g.GorevDurum,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId group by g.GorevDurum ", bgl.baglanti());
                 SqlDataReader dr = da.ExecuteReader();
+                chartControl1.Series["Series 1"].Points.Clear();
                 while (dr.Read())
                 {
 
@@ -195,7 +199,7 @@ namespace EnmosProje
                 SqlCommand dh = new SqlCommand("Select g.Label,COUNT(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId group by g.Label ", bgl.baglanti());
                 SqlDataReader dg = dh.ExecuteReader();
 
-
+                chartControl2.Series["Series 1"].Points.Clear();
                 while (dg.Read())
                 {
 
@@ -211,6 +215,7 @@ namespace EnmosProje
 
                 SqlCommand dp = new SqlCommand("Select g.Completed,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId group by g.Completed ", bgl.baglanti());
                 SqlDataReader dt = dp.ExecuteReader();
+                chartControl3.Series["Series 1"].Points.Clear();
                 while (dt.Read())
                 {
 
@@ -225,6 +230,7 @@ namespace EnmosProje
 
                 SqlCommand dq = new SqlCommand("Select g.Completed,Count(g.Ad) From Gorevler g INNER JOIN Calisanlar c1 ON g.AtananCalisan = c1.UserId LEFT JOIN Calisanlar c2 ON g.AtananCalisan2 = c2.UserId group by g.Completed ", bgl.baglanti());
                 SqlDataReader de = dq.ExecuteReader();
+                chartControl4.Series["Series 1"].Points.Clear();
                 while (de.Read())
                 {
 
@@ -326,43 +332,7 @@ namespace EnmosProje
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            string LastLogin = getmailadress();
-
-            if (LastLogin != "admin")
-            {
-
-
-                SqlCommand komut = new SqlCommand("update Gorevler set Aciklama=@p4,GorevDurum=@p5 where Ad=@p9", bgl.baglanti());
-                komut.Parameters.AddWithValue("@p4", RchAciklama.Text);
-                komut.Parameters.AddWithValue("@p5", CmbDurum.Text);
-                komut.Parameters.Add("@p9", TxtIs.Text);
-                komut.ExecuteNonQuery();
-                bgl.baglanti().Close();
-                MessageBox.Show("İş durumu güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                listele();
-                
-            }
-
-            else
-            {
-           
-                SqlCommand komut = new SqlCommand("update Gorevler set Aciklama=@p4,GorevDurum=@p5,Deadline=@p2,AtananCalisan=@p3,AtananCalisan2=@p6 where Ad=@p9", bgl.baglanti());
-                komut.Parameters.AddWithValue("@p4", RchAciklama.Text);
-                komut.Parameters.AddWithValue("@p5", CmbDurum.Text);
-                //komut.Parameters.AddWithValue("@p2", DtpDeadline.Text);
-                 komut.Parameters.AddWithValue("@p2", MskDeadline.Text);
-                komut.Parameters.AddWithValue("@p3", getnamefromgorev(CmbAssignee.Text));              
-                komut.Parameters.AddWithValue("@p6", getnamefromgorev(CmbAssignee2.Text));
-                komut.Parameters.Add("@p9", TxtIs.Text);
-                komut.ExecuteNonQuery();
-                bgl.baglanti().Close();
-                MessageBox.Show("İş durumu güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                listele();
-            }
-        }
+      
 
   
   
@@ -457,11 +427,68 @@ namespace EnmosProje
                 TxtIs.Text = "";
                 RchAciklama.Text = "";
                 CmbDurum.Text = "";
-                MskDeadline.Text = "";
+                MskDeadline.Text = ""; 
                 //DtpDeadline.Text = "";
                 CmbAssignee.Text = "";
                 CmbAssignee2.Text = "";
                 TxtLabel.Text = "";
+            }
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            string LastLogin = getmailadress();
+
+            if (LastLogin != "admin")
+            {
+
+
+                SqlCommand komut = new SqlCommand("update Gorevler set Aciklama=@p4,GorevDurum=@p5,Completed=@p6 where Ad=@p9", bgl.baglanti());
+                komut.Parameters.AddWithValue("@p4", RchAciklama.Text);
+                komut.Parameters.AddWithValue("@p5", CmbDurum.Text);
+                komut.Parameters.Add("@p9", TxtIs.Text);
+                string isCompleted = null;
+                if (CmbDurum.Text != "Finished")
+                {
+                    isCompleted = "0";
+                }
+                else
+                {
+                    isCompleted = "1";
+                }
+                komut.Parameters.AddWithValue("@p6", isCompleted);
+                komut.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                MessageBox.Show("Job Status is updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                listele();
+
+            }
+
+            else
+            {
+
+                SqlCommand komut = new SqlCommand("update Gorevler set Aciklama=@p4,GorevDurum=@p5,Deadline=@p2,AtananCalisan=@p3,AtananCalisan2=@p6,Completed=@p8 where Ad=@p9", bgl.baglanti());
+                komut.Parameters.AddWithValue("@p4", RchAciklama.Text);
+                komut.Parameters.AddWithValue("@p5", CmbDurum.Text);
+                //komut.Parameters.AddWithValue("@p2", DtpDeadline.Text);
+                komut.Parameters.AddWithValue("@p2", MskDeadline.Text);
+                komut.Parameters.AddWithValue("@p3", getnamefromgorev(CmbAssignee.Text));
+                komut.Parameters.AddWithValue("@p6", getnamefromgorev(CmbAssignee2.Text));
+                string isCompleted = null;
+                if (CmbDurum.Text != "Finished")
+                {
+                    isCompleted = "0";
+                }
+                else
+                {
+                    isCompleted = "1";
+                }
+                komut.Parameters.AddWithValue("@p8", isCompleted);
+                komut.Parameters.Add("@p9", TxtIs.Text);
+                komut.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                MessageBox.Show("Job Status is updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                listele();
             }
         }
     }

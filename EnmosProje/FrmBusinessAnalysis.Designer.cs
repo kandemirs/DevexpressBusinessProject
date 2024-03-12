@@ -40,7 +40,6 @@ namespace EnmosProje
             DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView3 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBusinessAnalysis));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -83,13 +82,13 @@ namespace EnmosProje
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 71);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1284, 440);
+            this.xtraTabControl1.Size = new System.Drawing.Size(984, 461);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -99,9 +98,9 @@ namespace EnmosProje
             // 
             this.xtraTabPage1.Controls.Add(this.splitContainer1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1282, 415);
+            this.xtraTabPage1.Size = new System.Drawing.Size(982, 436);
             this.xtraTabPage1.Text = "Assignments";
-            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
+//            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 
             // splitContainer1
             // 
@@ -116,8 +115,8 @@ namespace EnmosProje
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chartControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1282, 415);
-            this.splitContainer1.SplitterDistance = 599;
+            this.splitContainer1.Size = new System.Drawing.Size(982, 436);
+            this.splitContainer1.SplitterDistance = 458;
             this.splitContainer1.TabIndex = 5;
             // 
             // chartControl2
@@ -133,7 +132,7 @@ namespace EnmosProje
             series1.View = sideBySideBarSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl2.Size = new System.Drawing.Size(599, 415);
+            this.chartControl2.Size = new System.Drawing.Size(458, 436);
             this.chartControl2.TabIndex = 4;
             // 
             // chartControl1
@@ -146,14 +145,14 @@ namespace EnmosProje
             series2.View = doughnutSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(679, 415);
+            this.chartControl1.Size = new System.Drawing.Size(520, 436);
             this.chartControl1.TabIndex = 5;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainer2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1282, 486);
+            this.xtraTabPage2.Size = new System.Drawing.Size(982, 436);
             this.xtraTabPage2.Text = "Emlployee";
             // 
             // splitContainer2
@@ -169,8 +168,8 @@ namespace EnmosProje
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.chartControl4);
-            this.splitContainer2.Size = new System.Drawing.Size(1282, 486);
-            this.splitContainer2.SplitterDistance = 610;
+            this.splitContainer2.Size = new System.Drawing.Size(982, 436);
+            this.splitContainer2.SplitterDistance = 467;
             this.splitContainer2.TabIndex = 4;
             // 
             // chartControl3
@@ -187,7 +186,7 @@ namespace EnmosProje
             series3.View = sideBySideBarSeriesView2;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3};
-            this.chartControl3.Size = new System.Drawing.Size(610, 486);
+            this.chartControl3.Size = new System.Drawing.Size(467, 436);
             this.chartControl3.TabIndex = 3;
             // 
             // chartControl4
@@ -204,7 +203,7 @@ namespace EnmosProje
             series4.View = sideBySideBarSeriesView3;
             this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series4};
-            this.chartControl4.Size = new System.Drawing.Size(668, 486);
+            this.chartControl4.Size = new System.Drawing.Size(511, 436);
             this.chartControl4.TabIndex = 4;
             // 
             // gridView1
@@ -215,9 +214,9 @@ namespace EnmosProje
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1284, 511);
+            this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "FrmBusinessAnalysis";
             this.Text = "FrmBusinessAnalysis";

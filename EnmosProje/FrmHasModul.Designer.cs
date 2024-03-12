@@ -39,10 +39,11 @@ namespace EnmosProje
             this.BtnEnmosEmployees = new DevExpress.XtraEditors.SimpleButton();
             this.BtnMail = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.BtnAddIdentity = new DevExpress.XtraEditors.SimpleButton();
             this.BtnAddEmployee = new DevExpress.XtraEditors.SimpleButton();
             this.BtnRequests = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnChangePassword = new DevExpress.XtraEditors.SimpleButton();
             this.BtnCalculator = new DevExpress.XtraEditors.SimpleButton();
             this.LblDepOrPos = new System.Windows.Forms.Label();
             this.LblHello = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@ namespace EnmosProje
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.LabelDay = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -65,6 +67,7 @@ namespace EnmosProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAnaSayfa
@@ -140,16 +143,17 @@ namespace EnmosProje
             this.BtnMail.Name = "BtnMail";
             this.BtnMail.Size = new System.Drawing.Size(208, 54);
             this.BtnMail.TabIndex = 14;
-            this.BtnMail.Text = "SendMail";
+            this.BtnMail.Text = "Contact List";
             this.BtnMail.Click += new System.EventHandler(this.BtnMail_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.simpleButton1);
             this.groupBox1.Controls.Add(this.BtnAddIdentity);
             this.groupBox1.Controls.Add(this.BtnAddEmployee);
             this.groupBox1.Controls.Add(this.BtnRequests);
-            this.groupBox1.Controls.Add(this.simpleButton2);
+            this.groupBox1.Controls.Add(this.BtnChangePassword);
             this.groupBox1.Controls.Add(this.BtnCalculator);
             this.groupBox1.Controls.Add(this.BtnPerformance);
             this.groupBox1.Controls.Add(this.BtnMail);
@@ -164,10 +168,21 @@ namespace EnmosProje
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(3, 610);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(208, 54);
+            this.simpleButton1.TabIndex = 21;
+            this.simpleButton1.Text = "Send Mail";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // BtnAddIdentity
             // 
             this.BtnAddIdentity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAddIdentity.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnAddIdentity.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddIdentity.ImageOptions.Image")));
             this.BtnAddIdentity.Location = new System.Drawing.Point(3, 556);
             this.BtnAddIdentity.Name = "BtnAddIdentity";
             this.BtnAddIdentity.Size = new System.Drawing.Size(208, 54);
@@ -197,15 +212,16 @@ namespace EnmosProje
             this.BtnRequests.Text = "Requests";
             this.BtnRequests.Click += new System.EventHandler(this.BtnRequests_Click_1);
             // 
-            // simpleButton2
+            // BtnChangePassword
             // 
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(3, 394);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(208, 54);
-            this.simpleButton2.TabIndex = 17;
-            this.simpleButton2.Text = "Settings";
+            this.BtnChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnChangePassword.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnChangePassword.ImageOptions.Image")));
+            this.BtnChangePassword.Location = new System.Drawing.Point(3, 394);
+            this.BtnChangePassword.Name = "BtnChangePassword";
+            this.BtnChangePassword.Size = new System.Drawing.Size(208, 54);
+            this.BtnChangePassword.TabIndex = 17;
+            this.BtnChangePassword.Text = "Change Password";
+            this.BtnChangePassword.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // BtnCalculator
             // 
@@ -216,6 +232,7 @@ namespace EnmosProje
             this.BtnCalculator.Size = new System.Drawing.Size(208, 54);
             this.BtnCalculator.TabIndex = 16;
             this.BtnCalculator.Text = "Calculator";
+            this.BtnCalculator.Click += new System.EventHandler(this.BtnCalculator_Click);
             // 
             // LblDepOrPos
             // 
@@ -251,6 +268,7 @@ namespace EnmosProje
             this.BtnProfile.Size = new System.Drawing.Size(90, 21);
             this.BtnProfile.TabIndex = 21;
             this.BtnProfile.Text = "Exit";
+            this.BtnProfile.Click += new System.EventHandler(this.BtnProfile_Click);
             // 
             // groupBox2
             // 
@@ -355,7 +373,7 @@ namespace EnmosProje
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.LabelDay);
             this.groupBox4.Controls.Add(this.LblTime);
-            this.groupBox4.Location = new System.Drawing.Point(885, 52);
+            this.groupBox4.Location = new System.Drawing.Point(878, 52);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(196, 68);
             this.groupBox4.TabIndex = 26;
@@ -374,6 +392,17 @@ namespace EnmosProje
             this.LabelDay.TabIndex = 26;
             this.LabelDay.Text = "Monday";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(931, 494);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
             // FrmHasModul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,12 +411,12 @@ namespace EnmosProje
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmHasModul";
-            this.Text = "FrmHasModul";
             this.Load += new System.EventHandler(this.FrmHasModul_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -399,6 +428,7 @@ namespace EnmosProje
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,7 +452,7 @@ namespace EnmosProje
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton BtnChangePassword;
         private DevExpress.XtraEditors.SimpleButton BtnCalculator;
         private DevExpress.XtraEditors.SimpleButton BtnAddEmployee;
         private DevExpress.XtraEditors.SimpleButton BtnRequests;
@@ -432,5 +462,7 @@ namespace EnmosProje
         private System.Windows.Forms.Label LabelDay;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.SimpleButton BtnAddIdentity;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

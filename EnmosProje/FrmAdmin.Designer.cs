@@ -35,9 +35,11 @@ namespace EnmosProje
             this.label2 = new System.Windows.Forms.Label();
             this.TxtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
             this.TxtSifre = new DevExpress.XtraEditors.TextEdit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             BtnGirisYap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TxtKullaniciAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGirisYap
@@ -65,7 +67,6 @@ namespace EnmosProje
             this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName:";
-//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -78,7 +79,6 @@ namespace EnmosProje
             this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
-//            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TxtKullaniciAdi
             // 
@@ -86,7 +86,6 @@ namespace EnmosProje
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
             this.TxtKullaniciAdi.Size = new System.Drawing.Size(121, 20);
             this.TxtKullaniciAdi.TabIndex = 2;
-//            this.TxtKullaniciAdi.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // TxtSifre
             // 
@@ -95,7 +94,19 @@ namespace EnmosProje
             this.TxtSifre.Properties.UseSystemPasswordChar = true;
             this.TxtSifre.Size = new System.Drawing.Size(121, 20);
             this.TxtSifre.TabIndex = 3;
-//            this.TxtSifre.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(355, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmAdmin
             // 
@@ -106,6 +117,7 @@ namespace EnmosProje
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(384, 386);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(BtnGirisYap);
             this.Controls.Add(this.TxtSifre);
             this.Controls.Add(this.TxtKullaniciAdi);
@@ -116,6 +128,7 @@ namespace EnmosProje
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.TxtKullaniciAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +140,6 @@ namespace EnmosProje
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit TxtKullaniciAdi;
         private DevExpress.XtraEditors.TextEdit TxtSifre;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

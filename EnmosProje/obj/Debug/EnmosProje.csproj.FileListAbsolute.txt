@@ -141,7 +141,6 @@ C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.Fr
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmBusinessAnalysis.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmEnmos.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmGorevlerim.resources
-C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmHomePage.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmMail.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmRehber.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmRequests.resources
@@ -173,3 +172,4 @@ C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\bin\Debug\ja\DevExpress
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\bin\Debug\ru\DevExpress.XtraScheduler.v21.1.Core.resources.dll
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmProfile.resources
 C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmAddIdentity.resources
+C:\Users\Arge.stajyer\source\repos\EnmosProje\EnmosProje\obj\Debug\EnmosProje.FrmChangePassword.resources
