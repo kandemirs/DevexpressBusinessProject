@@ -16,7 +16,7 @@ namespace EnmosProje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHasModul());
+            Application.Run(new FrmAdmin());
         }
     }
 }

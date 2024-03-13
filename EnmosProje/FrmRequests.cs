@@ -47,7 +47,11 @@ namespace EnmosProje
             listele();
         }
 
-        private void BtnReject_Click(object sender, EventArgs e)
+
+
+        string Nm, Dscrptn, Tsk, Prrty, Assgn, Assgn2, Lbl, Ddln, Rqstr;
+
+        private void BtnReject_Click_1(object sender, EventArgs e)
         {
             /*SqlCommand komutsil = new SqlCommand("Delete From Requests where Name=@p1 AND Description=@p2 AND Requester=@p3", bgl.baglanti());
             komutsil.Parameters.AddWithValue("@p1", Nm);
@@ -60,13 +64,8 @@ namespace EnmosProje
             listele();
         }
 
-
-        string Nm, Dscrptn, Tsk, Prrty, Assgn, Assgn2, Lbl, Ddln, Rqstr;
-
-
-        private void BtnOnayla_Click(object sender, EventArgs e)
+        private void BtnOnayla_Click_1(object sender, EventArgs e)
         {
-            
             SqlCommand komut = new SqlCommand("insert into Gorevler(Ad,Aciklama,GorevDurum,Onem,AtananCalisan,AtananCalisan2,Label,Deadline)values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", Nm);
             komut.Parameters.AddWithValue("@p2", Dscrptn);
@@ -81,12 +80,10 @@ namespace EnmosProje
             bgl.baglanti().Close();
             MessageBox.Show("The Job request has been approved.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listele();
-
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             if (dr != null)
             {
@@ -109,5 +106,7 @@ namespace EnmosProje
             }
 
         }
+
+       
     }
 }
