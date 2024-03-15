@@ -109,7 +109,7 @@ namespace EnmosProje
             if (LastLogin != "admin")
             {
 
-                SqlCommand komut = new SqlCommand("insert into Requests(Name,Description,TaskStatus,Priority,Assignee,Assignee2,Label,Deadline,Requester)values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)", bgl.baglanti());
+                SqlCommand komut = new SqlCommand("insert into Requests(Name,Description,TaskStatus,Priority,Assignee,Assignee2,Label,Deadline,Requester,ApproveOrReject)values (@p1, @p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", bgl.baglanti());
                 komut.Parameters.AddWithValue("@p1", TxtTask.Text);
                 komut.Parameters.AddWithValue("@p2", RchDescription.Text);
                 komut.Parameters.AddWithValue("@p3", "Waiting");
@@ -136,6 +136,7 @@ namespace EnmosProje
                 komut.Parameters.AddWithValue("@p8", DtpDeadline.Text);
 
                 komut.Parameters.AddWithValue("@p9", getRequestername());
+                komut.Parameters.AddWithValue("@p10", "0");
 
                 komut.ExecuteNonQuery();
                 bgl.baglanti().Close();
